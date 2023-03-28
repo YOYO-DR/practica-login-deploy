@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% if user.is_authenticated %}
+<h1>Hola {{request.user.username|title}}, Bienvenido a la vista principal</h1>
+{% else %}
+<h1>Vista principal</h1>
+{% endif %}
+{% endblock %}
